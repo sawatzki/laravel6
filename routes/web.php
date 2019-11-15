@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'MeetengsController@index')->name('meetings');
 
 Auth::routes();
 
