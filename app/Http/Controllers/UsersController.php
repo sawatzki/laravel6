@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Model\User;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
     public function index()
     {
-        $notes = User::all();
-        return view('public.users.index', compact('notes'));
+        $users = User::all();
+        return view('public.users.index', compact('users'));
     }
 
-    public function edit($id)
+    public function show($id)
     {
-        $note = User::where('id', $id)->first();
-        return view('public.users.edit', compact('note'));
+        $user = User::where('id', $id)->first();
+        return view('public.users.show', compact('user'));
     }
 
     public function store(Request $request, $id = null)
