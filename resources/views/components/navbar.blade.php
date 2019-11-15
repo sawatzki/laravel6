@@ -19,7 +19,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="{{ route('appointments.index') }}">All appointments</a>
-                        <a class="dropdown-item" href="{{ route('appointments.index') }}">My appointments</a>
+                        <a class="dropdown-item" href="{{ route('appointments.my') }}">My appointments</a>
 
                     </div>
                 </li>

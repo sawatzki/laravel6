@@ -13,6 +13,11 @@ class AppointmentsController extends Controller
         $appointments = Appointment::all();
         return view('public.appointments.index', compact('appointments'));
     }
+   public function my()
+    {
+        $appointments = Appointment::where('user_id', Auth::user()->id)->get();
+        return view('public.appointments.index', compact('appointments'));
+    }
 
     public function edit($id)
     {
