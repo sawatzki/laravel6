@@ -23,8 +23,8 @@ Route::post('/appointments/store/{id?}', 'AppointmentsController@store')->name('
 Route::get('/appointments/{id}', 'AppointmentsController@destroy')->name('appointments.destroy');
 
 Route::get('/users', 'UsersController@index')->name('users.index');
-Route::get('/users/my', 'UsersController@my')->name('users.my');
-//Route::get('/users/edit/{id?}', 'UsersController@edit')->name('users.edit');
+//Route::get('/users/my', 'UsersController@appointments')->name('users.appointments');
 Route::get('/users/show/{id}', 'UsersController@show')->name('users.show');
+Route::get('/users/show/appointments/{id}', 'UsersController@appointments')->name('users.show.appointments');
 Route::post('/users/store/{id?}', 'UsersController@store')->name('users.store');
 Route::get('/users/{id}', 'UsersController@destroy')->name('users.destroy');

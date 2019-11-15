@@ -34,7 +34,7 @@ class AppointmentsController extends Controller
         if ($id > 0) {
             Appointment::whereId($id)->update(
                 [
-                    'user_id' => $user_id,
+//                    'user_id' => $user_id,
                     'title' => $request->appointmentTitle,
                     'description' => $request->appointmentDescription,
                 ]);

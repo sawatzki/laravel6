@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Appointment;
 use App\Model\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UsersController extends Controller
 {
@@ -17,6 +19,13 @@ class UsersController extends Controller
     {
         $user = User::where('id', $id)->first();
         return view('public.users.show', compact('user'));
+    }
+
+    public function appointments($id)
+    {
+        $appointments = Appointment::where('user_id', $id)->get();
+        $user = User::where('id', Auth::user()->id)->first();
+        return view('public.users.appointments', compact('appointments', 'user'));
     }
 
     public function store(Request $request, $id = null)
