@@ -11,6 +11,9 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
+                    <a class="nav-link" href="{{ route('users') }}">Users</a>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link" href="{{ route('meetings') }}">Meetings</a>
                 </li>
             </ul>

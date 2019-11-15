@@ -11,8 +11,12 @@
 |
 */
 
-Route::get('/', 'MeetengsController@index')->name('meetings');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/meetings', 'MeetengsController@index')->name('meetings');
+
+
+Route::get('/users', 'UsersController@index')->name('users');
