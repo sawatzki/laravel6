@@ -11,10 +11,17 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('users') }}">Users</a>
+                    <a class="nav-link" href="{{ route('users.index') }}">Users</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('meetings') }}">Meetings</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Appointment
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{{ route('appointments.index') }}">All appointments</a>
+                        <a class="dropdown-item" href="{{ route('appointments.index') }}">My appointments</a>
+
+                    </div>
                 </li>
             </ul>
 

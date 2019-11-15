@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class MeetingsTableSeeder extends Seeder
+class AppointmentsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

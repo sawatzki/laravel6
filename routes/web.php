@@ -16,7 +16,9 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/meetings', 'MeetengsController@index')->name('meetings');
+Route::get('/appointments', 'AppointmentsController@index')->name('appointments.index');
+Route::get('/appointments/edit/{id?}', 'AppointmentsController@edit')->name('appointments.edit');
+Route::post('/appointments/store/{id?}', 'AppointmentsController@store')->name('appointments.store');
+Route::get('/appointments/{id}', 'AppointmentsController@destroy')->name('appointments.destroy');
 
-
-Route::get('/users', 'UsersController@index')->name('users');
+Route::get('/users', 'UsersController@index')->name('users.index');
