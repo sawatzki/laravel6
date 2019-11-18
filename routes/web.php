@@ -28,3 +28,5 @@ Route::get('/users/show/{id}', 'UsersController@show')->name('users.show');
 Route::get('/users/show/appointments/{id}', 'UsersController@appointments')->name('users.show.appointments');
 Route::post('/users/store/{id?}', 'UsersController@store')->name('users.store');
 Route::get('/users/{id}', 'UsersController@destroy')->name('users.destroy');
+
+
