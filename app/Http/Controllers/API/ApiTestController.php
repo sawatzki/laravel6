@@ -14,7 +14,6 @@ class ApiTestController extends Controller
      */
     public function index()
     {
-        die("sefwe");
         $arr = [
             'qqq' => '111',
             'www' => '222',
