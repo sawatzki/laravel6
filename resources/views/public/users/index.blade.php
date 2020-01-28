@@ -9,6 +9,11 @@
         <input type="submit" value="store">
     </form>
     <hr>
+    <hr>
+    <Artem-component></Artem-component>
+    <hr>
+    <hr>
+
     @foreach($users as $user)
         <a href="{{ route('users.show', $user->id) }}">{{ $user->name }}</a>
         <a href="{{ route('users.destroy', ['id' => $user->id]) }}">del</a><br>
